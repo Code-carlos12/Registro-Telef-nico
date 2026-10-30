@@ -1,0 +1,8 @@
+target/
+*.class
+
+# NetBeans / IntelliJ / VS Code
+nbproject/private/
+.idea/
+*.iml
+.vscode/

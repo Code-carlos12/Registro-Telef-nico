@@ -38,7 +38,7 @@ public class Lexer {
                        tokens.add(new Token(Token.Type.DIGIT, String.valueOf(currentChar)));
                        position++;
                    } else{
-                       throw new RuntimeException("Carracter incorrecto: " + currentChar);
+                       throw new FormatoTelefonoException("Carácter inválido: '" + currentChar + "'");
                    }
                    break;
            }

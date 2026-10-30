@@ -24,7 +24,7 @@ public class Parser {
         if(currentToken.getType() == type){
             advance();
         } else {
-            throw new RuntimeException("Esperando " + type + "para encontrar " + currentToken.getType());
+            throw new FormatoTelefonoException("Se esperaba " + type + " pero se encontró " + currentToken.getType());
         }
     }
     
@@ -37,7 +37,6 @@ public class Parser {
        match(Token.Type.DASH);
        parseDigits(4);
        match(Token.Type.EOF);
-       System.out.println("Analisis exitoso!"); 
     }
     
     private void parseDigits(int count){
